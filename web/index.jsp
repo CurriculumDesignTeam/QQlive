@@ -4,7 +4,12 @@
 <html>
   <head>
     <title>在线影视</title>
+
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
   </head>
   <body>
 
@@ -15,6 +20,10 @@
   <br>
 
   <c:out value="test"/>
+
+  <br>
+
+  <button class="btn btn-default btn-sm">按钮</button>
 
   </body>
 </html>
