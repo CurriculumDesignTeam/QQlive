@@ -4,9 +4,9 @@ import java.sql.*;
 
 public class DBUtil {
 
-	private static final String DB = "";
-	private static final String USER="";
-	private static final String PASSWORD="";
+	private static final String DB = "YSGL";
+	private static final String USER="qqliveadmin";
+	private static final String PASSWORD="qqliveadmin";
 	private static final String URL = "jdbc:sqlserver://127.0.0.1:1433;databaseName=" + DB + ";user=" + USER + ";password=" + PASSWORD;
 	protected static Statement s=null;
 	protected static ResultSet rs=null;
@@ -103,7 +103,7 @@ public class DBUtil {
 	}
 
 	/**
-	 **关闭连接对象
+	 * 关闭连接对象
 	 */
 	public static void close(){
 		try {
@@ -117,6 +117,5 @@ public class DBUtil {
 			e.printStackTrace();
 		}
 	}
-//
 
 }
