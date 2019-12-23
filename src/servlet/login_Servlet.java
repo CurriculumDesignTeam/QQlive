@@ -28,7 +28,7 @@ public class login_Servlet extends HttpServlet {
 
         String un=req.getParameter("username");
         String pw=req.getParameter("password");
-        if(un==null||pw==null||un.strip().equals("")||pw.strip().equals("")){
+        if(un==null||pw==null||un.trim().equals("")||pw.trim().equals("")){
             out.print("<script>alert(\"账号密码不能为空\");window.location.href=\"login.jsp\";</script>");
             return;
         }
