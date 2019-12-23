@@ -1,14 +1,8 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: fyz
-  Date: 2019/12/23
-  Time: 13:50
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <title>注册</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
     <script type="text/javascript" rel="script" src="js/check_function.js"></script>
     <script src="js/jquery-3.4.1.js"></script>
 </head>

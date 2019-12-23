@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.wrap{
+    margin-top: 6px;
+    width:200px;
+    word-break:keep-all;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    font-size: 15px;
+}
