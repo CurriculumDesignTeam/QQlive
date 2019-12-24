@@ -3,42 +3,51 @@
 <head>
     <title>登录</title>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+    <link rel="stylesheet" href="css/login.css">
 </head>
+
 <body style="text-align: center">
 
-<div>
-    <br><br><br>
-    <form action="Login" method="post">
+    <div class="main" style="border-radius: 12px">
 
-        <h1>欢迎使用在线影视系统</h1><br><br>
-
-        <div>
-            <input type="email" id="username" name="username" placeholder="Enter email">
-            <br><span id="usernamecheck"></span>
-            <br />
-            <br />
+        <div class="title" style="margin: 25px 0 45px 0">
+            <h1>用户登录</h1>
         </div>
 
-        <div class="input-area">
-            <input type="password" id="password" name="password" placeholder="Enter password">
-            <br />
-            <br />
-        </div>
+        <form action="Login" class="login-form" method="post" novalidate >
+            <div class="input-content">
+                <div>
+                    <label>
+                        <input type="email" placeholder="请输入邮箱" id="username" name="username" required/>
+                    </label>
+                </div>
 
-        <div class="tips">
-            <label style="text-align: left"><a href="register.jsp">注册账号</a></label>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <label><a href="findpassword.jsp">忘记密码？</a></label><br><br>
-        </div>
+                <div style="margin-top: 16px">
+                    <label>
+                        <input type="password" placeholder="登录密码" id="password" name="password" required maxlength="18"/>
+                    </label>
+                </div>
+            </div>
 
-        <div>
-            <input 	type="submit" class="btn" name="login" value="立即登陆">
-        </div>
-        <br><br>
+            <div style="text-align: center">
+                <button type="submit" class="enter-btn" >登录</button>
+            </div>
 
-    </form>
-</div>
+            <div class="foor">
+                <div class="left">
+                    <a href="findpassword.jsp">
+                        忘记密码 ?
+                    </a>
+                </div>
+                <div class="right">
+                    <a href="register.jsp">
+                        注册账户
+                    </a>
+                </div>
+            </div>
 
+        </form>
+    </div>
 
 </body>
 </html>
