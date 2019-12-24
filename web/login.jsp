@@ -18,13 +18,13 @@
             <div class="input-content">
                 <div>
                     <label>
-                        <input type="email" placeholder="请输入邮箱" id="username" name="username" required/>
+                        <input type="email" placeholder="请输入邮箱" id="username" name="username" required value="1953649096@qq.com"/>
                     </label>
                 </div>
 
                 <div style="margin-top: 16px">
                     <label>
-                        <input type="password" placeholder="登录密码" id="password" name="password" required maxlength="18"/>
+                        <input type="password" placeholder="登录密码" id="password" name="password" required maxlength="18" value="w108412696"/>
                     </label>
                 </div>
             </div>

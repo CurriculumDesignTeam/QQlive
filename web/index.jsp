@@ -5,10 +5,10 @@
     <title>在线影视-中国领先的在线视频媒体平台，海量高清视频在线观看</title>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
     <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery-3.4.1.js"></script>
     <script>
-      var ranl = 0;
-      var useRand = 0;
       var curr = 0;
+      var addedLink = 0;
       images = [];
       images[0] = new Image();
       images[0].src = "imgs/slider/01.jpg";
@@ -35,16 +35,68 @@
       images[7].src = "imgs/slider/08.jpg";
       images[7].href = "https://v.qq.com/x/cover/rj8uc45tm8a17wm.html";
 
+      /**
+       * 设置封面滚动
+       */
       function swapPic(){
+        if(addedLink === 0){
+          addLink();
+          addedLink = 1;
+        }
         a = document.getElementById("randa");
         document.randimg.src = images[curr].src;
         a.href = images[curr].href;
+        var id = "p" + curr;
+        var p =  document.getElementById(id);
+        reset();
+        p.style.color = "#ff5c38";
+        p.style.fontSize = "21px";
         curr += 1;
         if(curr >= 8){
           curr = 0;
         }
-        setTimeout('swapPic()',3000);
+        setTimeout('swapPic()',2500);
       }
+
+      /**
+       * 添加超链接
+       */
+      function addLink() {
+        for(var i=0;i<8;i++){
+          var id = "a" + i;
+          var a = document.getElementById(id);
+          a.href = images[i].href;
+        }
+      }
+
+      /**
+       * 重置
+       */
+      function reset() {
+        for(var i=0;i<8;i++){
+          var id = "p" + i;
+          var p = document.getElementById(id);
+          p.style.color = "#ffffff";
+          p.style.fontSize = "16px";
+        }
+      }
+
+      /**
+       * 鼠标悬浮事件
+       */
+      $(function () {
+        $("p[id^='p']").hover(function () {
+          var id = $(this).attr("id");
+          var n = id.substring(1);
+          n = parseInt(n);
+          curr = n;
+          a = document.getElementById("randa");
+          document.randimg.src = images[curr].src;
+          a.href = images[curr].href;
+          reset();
+        })
+      });
+
     </script>
 
   </head>
@@ -52,7 +104,6 @@
   <body style="background-color: rgb(248, 248, 248)" onload="swapPic()">
 
   <div style="background-color: rgb(99, 108, 114);height: 68px">
-
     <table>
       <tr>
         <td><img height="36px" src="favicon.ico" alt="logo"></td>
@@ -65,22 +116,22 @@
             <button type="submit">全网搜</button>
           </form>
         </td>
-
-        <td><div>
-          <c:if test="${sessionScope.loginuser.dzxx==null}">
-            <a href="login.jsp"><button>登录</button></a>
-            <a href="register.jsp" target="_blank"><button>注册</button></a>
-          </c:if>
-          <c:if test="${sessionScope.loginuser.dzxx!=null}">
-            <a href="MyInfo"><button>${sessionScope.loginuser.yhnc}</button></a>
-          </c:if>
-        </div></td>
+        <td>
+          <div>
+            <c:if test="${sessionScope.loginuser==null}">
+              <a href="login.jsp"><button>登录</button></a>
+              <a href="register.jsp" target="_blank"><button>注册</button></a>
+            </c:if>
+            <c:if test="${sessionScope.loginuser!=null}">
+              <a href="MyInfo"><button>${sessionScope.loginuser.yhnc}</button></a>
+              <a href="Logout"><button>注销</button></a>
+            </c:if>
+          </div>
+        </td>
 
       </tr>
     </table>
-
   </div>
-
 
   <div style="height: 530px;background-color: #2aabd2;margin-bottom: 10px">
 
@@ -91,16 +142,20 @@
     </div>
 
     <div style="background-color: rgb(34, 34, 45);width: 368px;height: 100%;float: right">
-      <b>重磅推荐</b><br>
-
-      <span>我和我的祖国</span><br>
-      <span>受益人</span><br>
-      <span>法医秦明之亡命救赎</span><br>
-      <span>少年的你</span><br>
-      <span>魔戟战神</span><br>
-      <span>长安道</span><br>
-      <span>邻座的怪同学</span><br>
-      <span>中国机长</span>
+      <ul>
+        <li style="height: 10%;padding: 0">
+          <img src="imgs/hot.png" style="width: 24px;margin: 0 0 0 10px;" alt="加载失败">
+          <b style="font-size: 26px;margin-left: 6px">重磅推荐</b>
+        </li>
+        <li><a id="a0" target="_blank"><p id="p0">我和我的祖国</p></a></li>
+        <li><a id="a1" target="_blank"><p id="p1">受益人</p></a></li>
+        <li><a id="a2" target="_blank"><p id="p2">法医秦明之亡命救赎</p></a></li>
+        <li><a id="a3" target="_blank"><p id="p3">少年的你</p></a></li>
+        <li><a id="a4" target="_blank"><p id="p4">魔戟战神</p></a></li>
+        <li><a id="a5" target="_blank"><p id="p5">长安道</p></a></li>
+        <li><a id="a6" target="_blank"><p id="p6">邻座的怪同学</p></a></li>
+        <li><a id="a7" target="_blank"><p id="p7">中国机长</p></a></li>
+      </ul>
 
     </div>
 
