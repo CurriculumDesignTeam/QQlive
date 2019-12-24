@@ -44,4 +44,22 @@
     </servlet-mapping>
 
 
+    <servlet>
+        <servlet-name>Search</servlet-name>
+        <servlet-class>servlet.Search_Servlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Search</servlet-name>
+        <url-pattern>/Search</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>MyInfo</servlet-name>
+        <servlet-class>servlet.MyInfo_Servlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MyInfo</servlet-name>
+        <url-pattern>/MyInfo</url-pattern>
+    </servlet-mapping>
+
 </web-app>

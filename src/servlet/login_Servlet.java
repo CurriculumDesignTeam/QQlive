@@ -1,5 +1,6 @@
 package servlet;
 
+import bean.Yh;
 import util.DBUtil;
 
 import javax.servlet.ServletException;
@@ -33,7 +34,9 @@ public class login_Servlet extends HttpServlet {
             return;
         }
         //System.out.println(un+"$"+pw);
-        String sql="select * from YH where YHMC="+" ? " +"and YHMM="+" ? "+";";
+
+        Yh loginuser=new Yh();
+        String sql="select * from yh where DZXX="+" ? " +"and YHMM="+" ? ";
         //System.out.println(sql);
         int result=0;
         try {
@@ -44,7 +47,9 @@ public class login_Servlet extends HttpServlet {
             //System.out.println(ps);
             ResultSet rs=ps.executeQuery();
             while (rs.next()){
-                out.println(rs.getString("YHMC"));
+                loginuser.setDzxx(rs.getString("DZXX"));
+                loginuser.setYhnc(rs.getString("YHNC"));
+                loginuser.setYhvip(rs.getString("YHVIP"));
                 result=1;
             }
         }catch (Exception e){
@@ -53,7 +58,7 @@ public class login_Servlet extends HttpServlet {
 
         if(result==1){//登录成功
             session.setAttribute("loginstatus","1");
-            session.setAttribute("loginun",un);
+            session.setAttribute("loginuser",loginuser);
             out.print("<script>alert(\"登录成功！！！\");window.location.href=\"index.jsp\";</script>");
         }else{//登录失败
             session.setAttribute("loginstatus","0");

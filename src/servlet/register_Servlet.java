@@ -42,14 +42,17 @@ public class register_Servlet extends HttpServlet {
 
         String un=req.getParameter("username");
         String pw=req.getParameter("password");
+        String nn=req.getParameter("nickname");
 
-        String SQL = "INSERT INTO YH VALUES(?,?)";
+        String SQL = "INSERT INTO yh VALUES(?,?,?,?)";
 
         int result=0;
         try {
             PreparedStatement ps= DBUtil.executePreparedStatment(SQL);
             ps.setString(1,un);
             ps.setString(2,pw);
+            ps.setString(3,nn);
+            ps.setBoolean(4,false);
             result=ps.executeUpdate();
         }catch (Exception e){
             e.printStackTrace();

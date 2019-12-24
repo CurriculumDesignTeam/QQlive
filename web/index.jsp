@@ -58,17 +58,22 @@
         <td><img height="36px" src="favicon.ico" alt="logo"></td>
 
         <td>
-          <form action="">
+          <form action="Search">
             <label>
-              <input type="text">
+              <input type="text" name="searchword">
             </label>
             <button type="submit">全网搜</button>
           </form>
         </td>
 
         <td><div>
-          <a href="login.jsp"><button>登录</button></a>
-          <a href="register.jsp" target="_blank"><button>注册</button></a>
+          <c:if test="${sessionScope.loginuser.dzxx==null}">
+            <a href="login.jsp"><button>登录</button></a>
+            <a href="register.jsp" target="_blank"><button>注册</button></a>
+          </c:if>
+          <c:if test="${sessionScope.loginuser.dzxx!=null}">
+            <a href="MyInfo"><button>${sessionScope.loginuser.yhnc}</button></a>
+          </c:if>
         </div></td>
 
       </tr>

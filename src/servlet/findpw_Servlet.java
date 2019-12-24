@@ -42,7 +42,7 @@ public class findpw_Servlet extends HttpServlet {
         String un=req.getParameter("username");
         String pw=req.getParameter("newpassword");
 
-        String SQL = "UPDATE YH SET YHMM=? where YHMC=?";
+        String SQL = "UPDATE yh SET YHMM=? where DZXX=?";
 
         int result=0;
         try {

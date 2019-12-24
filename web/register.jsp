@@ -12,6 +12,11 @@
     <form action="Register" method="post">
         <h1>欢迎注册</h1><br>
         <div>
+            <input type="text" id="nickname" name="nickname" placeholder="Enter nickname">
+            <br><br>
+        </div>
+
+        <div>
             <input type="email" id="username" name="username" placeholder="Enter email" onkeyup="checkemail()">
             <br><span id="usernamecheck"></span>
             <br><br>
