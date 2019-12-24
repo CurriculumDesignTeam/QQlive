@@ -1,4 +1,3 @@
-<%@ page import="util.Test" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
@@ -6,9 +5,51 @@
     <title>在线影视-中国领先的在线视频媒体平台，海量高清视频在线观看</title>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
     <link rel="stylesheet" href="css/index.css">
+    <script>
+      var ranl = 0;
+      var useRand = 0;
+      var curr = 0;
+      images = [];
+      images[0] = new Image();
+      images[0].src = "imgs/slider/01.jpg";
+      images[0].href = "https://v.qq.com/x/cover/hk765ykwj4bjpcl.html";
+      images[1] = new Image();
+      images[1].src = "imgs/slider/02.jpg";
+      images[1].href = "https://v.qq.com/x/cover/mzc00200hmv27ue.html";
+      images[2] = new Image();
+      images[2].src = "imgs/slider/03.jpg";
+      images[2].href = "https://v.qq.com/x/cover/mzc00200y6souzq.html";
+      images[3] = new Image();
+      images[3].src = "imgs/slider/04.jpg";
+      images[3].href = "https://v.qq.com/x/cover/714pdmcrnqdlmdx.html";
+      images[4] = new Image();
+      images[4].src = "imgs/slider/05.jpg";
+      images[4].href = "https://v.qq.com/x/cover/mzc00200qre764z.html";
+      images[5] = new Image();
+      images[5].src = "imgs/slider/06.jpg";
+      images[5].href = "https://v.qq.com/x/cover/mzc00200bq925ky.html";
+      images[6] = new Image();
+      images[6].src = "imgs/slider/07.jpg";
+      images[6].href = "https://v.qq.com/x/cover/3i8a8pc4nthjqq8.html";
+      images[7] = new Image();
+      images[7].src = "imgs/slider/08.jpg";
+      images[7].href = "https://v.qq.com/x/cover/rj8uc45tm8a17wm.html";
+
+      function swapPic(){
+        a = document.getElementById("randa");
+        document.randimg.src = images[curr].src;
+        a.href = images[curr].href;
+        curr += 1;
+        if(curr >= 8){
+          curr = 0;
+        }
+        setTimeout('swapPic()',3000);
+      }
+    </script>
+
   </head>
 
-  <body style="background-color: rgb(248, 248, 248)">
+  <body style="background-color: rgb(248, 248, 248)" onload="swapPic()">
 
   <div style="background-color: rgb(99, 108, 114);height: 68px">
 
@@ -35,12 +76,33 @@
 
   </div>
 
-  <div style="width: auto;height: 530px;background-color: #2aabd2">
-    <a href="https://v.qq.com/x/cover/hk765ykwj4bjpcl.html" target="_blank"><img src="http://puui.qpic.cn/vupload/0/1576217494378_6htfhqrluz.jpg/0" style="height: 530px" alt="图片加载失败"></a>
+
+  <div style="height: 530px;background-color: #2aabd2;margin-bottom: 10px">
+
+    <div style="background-color: #0f0f0f;width: 1535px;height: 100%;float: left">
+      <a id="randa" href="https://v.qq.com/x/cover/hk765ykwj4bjpcl.html" target="_blank">
+        <img id="randimg" name="randimg" src="imgs/slider/01.jpg" style="height: 530px" alt="图片加载失败">
+      </a>
+    </div>
+
+    <div style="background-color: rgb(34, 34, 45);width: 368px;height: 100%;float: right">
+      <b>重磅推荐</b><br>
+
+      <span>我和我的祖国</span><br>
+      <span>受益人</span><br>
+      <span>法医秦明之亡命救赎</span><br>
+      <span>少年的你</span><br>
+      <span>魔戟战神</span><br>
+      <span>长安道</span><br>
+      <span>邻座的怪同学</span><br>
+      <span>中国机长</span>
+
+    </div>
+
   </div>
 
   <div>
-    <h2 style="margin-left: 98px;margin-bottom: 10px">今日热门</h2>
+    <h2 style="margin-left: 116px;">今日热门</h2>
     <table style="margin: 0 auto">
       <tr>
 
@@ -127,7 +189,7 @@
   </div>
 
   <div style="margin-bottom: 20px;">
-    <h2 style="margin-left: 98px;margin-bottom: 10px">电影排行</h2>
+    <h2 style="margin-left: 116px;">电影排行</h2>
     <table style="margin: 0 auto;">
       <tr>
         <td>

@@ -4,10 +4,38 @@
 }
 .wrap{
     margin-top: 6px;
-    width:200px;
+    width:220px;
     word-break:keep-all;
     white-space:nowrap;
     overflow:hidden;
     text-overflow:ellipsis;
     font-size: 15px;
+}
+
+/*@font-face {*/
+/*    font-family: MiLan;*/
+/*    src: url("../fonts/ff.ttf");*/
+/*}*/
+
+h2{
+    font-size:28px;
+    color:#000;
+    font-weight:400;
+}
+
+a{
+    text-decoration-line: none;
+}
+b{
+    color: white;
+}
+span{
+    color: white;
+}
+p{
+    color: #000;
+}
+p:hover {
+    color:rgb(255, 92, 56);
+    /*font-family: MiLan, serif;*/
 }
