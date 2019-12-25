@@ -17,7 +17,7 @@ public class MyUtil {
             sdf.applyPattern("yyyyMMddHHmmss");//20191212112443
         }
         Date date =new Date();//获取当前时间
-        System.out.println("myutil当前时间："+sdf.format(date));
+        //System.out.println("myutil当前时间："+sdf.format(date));
         return sdf.format(date).toString();
     }
 

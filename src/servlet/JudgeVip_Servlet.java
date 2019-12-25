@@ -34,12 +34,6 @@ public class JudgeVip_Servlet extends HttpServlet {
         String selectmovieid=(String) req.getParameter("selectmovieid");
 
 
-        System.out.println(loginuser.getDzxx());
-        System.out.println(loginuser.getYhnc());
-        System.out.println(loginuser.isYhvip());
-        System.out.println(selectmovieid);
-
-
         String sql="select * from py where YPBH="+selectmovieid;
 
         ResultSet rs=DBUtil.executeQuery(sql);

@@ -79,4 +79,39 @@
         <url-pattern>/JudgeVip</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>Glylogin</servlet-name>
+        <servlet-class>servlet.Glylogin_Servlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Glylogin</servlet-name>
+        <url-pattern>/Glylogin</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Addmovie</servlet-name>
+        <servlet-class>servlet.Addmovie_Servlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Addmovie</servlet-name>
+        <url-pattern>/Addmovie</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>GlyInfo</servlet-name>
+        <servlet-class>servlet.GlyInfo_Servlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GlyInfo</servlet-name>
+        <url-pattern>/GlyInfo</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>GlyLogout</servlet-name>
+        <servlet-class>servlet.Glylogout_Servlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GlyLogout</servlet-name>
+        <url-pattern>/GlyLogout</url-pattern>
+    </servlet-mapping>
 </web-app>

@@ -1,5 +1,6 @@
 package servlet;
 
+import bean.Gly;
 import bean.Yh;
 import util.DBUtil;
 
@@ -13,7 +14,7 @@ import java.io.PrintWriter;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-public class login_Servlet extends HttpServlet {
+public class Glylogin_Servlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         doPost(req, resp);
@@ -23,9 +24,8 @@ public class login_Servlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("UTF-8");
         resp.setContentType("text/html;charset=UTF-8");
-
-        PrintWriter out=resp.getWriter();
         HttpSession session=req.getSession();
+        PrintWriter out=resp.getWriter();
 
         String un=req.getParameter("username");
         String pw=req.getParameter("password");
@@ -35,8 +35,8 @@ public class login_Servlet extends HttpServlet {
         }
         //System.out.println(un+"$"+pw);
 
-        Yh loginuser=new Yh();
-        String sql="select * from yh where DZXX="+" ? " +"and YHMM="+" ? ";
+        Gly logingly=new Gly();
+        String sql="select * from gly where GLYZH="+" ? " +"and GLYMM="+" ? ";
         //System.out.println(sql);
         int result=0;
         try {
@@ -47,9 +47,7 @@ public class login_Servlet extends HttpServlet {
             //System.out.println(ps);
             ResultSet rs=ps.executeQuery();
             while (rs.next()){
-                loginuser.setDzxx(rs.getString("DZXX"));
-                loginuser.setYhnc(rs.getString("YHNC"));
-                loginuser.setYhvip(rs.getBoolean("YHVIP"));
+                logingly.setGlyzh(rs.getString("GLYZH"));
                 result=1;
             }
         }catch (Exception e){
@@ -57,8 +55,8 @@ public class login_Servlet extends HttpServlet {
         }
 
         if(result==1){//登录成功
-            session.setAttribute("loginuser",loginuser);
-            out.print("<script>alert(\"登录成功！！！\");window.location.href=\"index.jsp\";</script>");
+            session.setAttribute("logingly",logingly);
+            out.print("<script>alert(\"登录成功！！！\");window.location.href=\"addmovie.jsp\";</script>");
         }else{//登录失败
             out.print("<script>alert(\"账号密码不匹配，请检查后重新登录！！！\");window.history.back(-1);</script>");
         }

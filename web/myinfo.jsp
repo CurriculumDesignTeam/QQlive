@@ -5,13 +5,27 @@
     <title>我的信息</title>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
 </head>
-<body>
+<body style="text-align: center">
 
 <c:if test="${sessionScope.gkjl!=null}">
-    <c:forEach var="item" items="${sessionScope.gkjl}">
-        ${item.ypmc}
-        ${item.gksj}
-    </c:forEach>
+    <div>
+        <h1>${sessionScope.loginuser.yhnc}の观影记录</h1>
+        <table align="center">
+            <tr>
+                <th>观看影片名称</th>
+                <th>上次观看时间</th>
+            </tr>
+
+            <c:forEach var="item" items="${sessionScope.gkjl}">
+                <tr>
+                    <td>${item.ypmc}</td>
+                    <td>${item.gksj}</td>
+                </tr>
+
+
+            </c:forEach>
+        </table>
+    </div>
 </c:if>
 
 
