@@ -1,5 +1,7 @@
 package servlet;
 
+import util.MailUtil;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -19,10 +21,13 @@ public class sendemail_Servlet extends HttpServlet {
         String to = req.getParameter("email");
         System.out.println("to:"+to);
         if(to!=null) {//发送验证码
-            String email_code = util.MailUtil.randomVC(6);
+            String email_code = MailUtil.randomVC(6);
             session.setAttribute("ecode",email_code);
             System.out.println(email_code);
-            util.MailUtil.send_email(to, email_code);
+
+//            MailUtil.send_email(to, email_code);
+            MailUtil.sendHtml("在线影视",to,"验证码",email_code);
+
             System.out.println("发送验证码成功");
         }
 

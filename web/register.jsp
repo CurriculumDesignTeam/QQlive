@@ -5,44 +5,49 @@
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
     <script type="text/javascript" rel="script" src="js/check_function.js"></script>
     <script src="js/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="css/register.css">
 </head>
+
 <body style="text-align: center">
 
-<div>
-    <form action="Register" method="post">
-        <h1>欢迎注册</h1><br>
-        <div>
-            <input type="text" id="nickname" name="nickname" placeholder="Enter nickname">
-            <br><br>
-        </div>
+    <div class="div">
+        <form name="f1" action="Register" method="post" class="registered" onsubmit="return check()">
+            <h1 style="text-align: center;">在线视频-用户注册</h1>
+            <label>
+                <span>昵称：</span>
+                <input type="text" id="nickname" name="nickname" placeholder="Enter nickname">
+            </label>
 
-        <div>
-            <input type="email" id="username" name="username" placeholder="Enter email" onkeyup="checkemail()">
-            <br><span id="usernamecheck"></span>
-            <br><br>
-        </div>
+            <label>
+                <span>邮箱：</span>
+                <input type="email" id="username" name="username" placeholder="Enter email" onkeyup="checkemail()">
 
-        <input type="button" id="toemail" class="btn" value="发送邮箱验证码" onclick="get_email_code()"><br><br>
+                <input type="button" class="btn" id="toemail" value="发送验证码" onclick="get_email_code()">
+            </label>
+            <span id="usernamecheck"></span>
+            <label>
+                <span>验证码：</span>
+                <input type="text" id="email_code" placeholder="Enter emailcode" name="email_code">
+            </label>
 
-        <div>
-            <input type="text" id="email_code" placeholder="Enter emailcode" name="email_code">
-            <br><br>
-        </div>
+            <label>
+                <span>密码：</span>
+                <input type="password" id="password" name="password" placeholder="Enter password" onkeyup="checkpassword()">
+            </label>
 
-        <div>
-            <input type="password" id="password" name="password" placeholder="Enter password" onkeyup="checkpassword()">
-            <br><span id="passwordcheck1"></span>
-            <br><span id="passwordcheck2"></span>
-            <br><span id="passwordcheck3"></span>
-            <br><br>
-        </div>
+            <div style="margin-left: 70px">
+                <span id="passwordcheck1"></span>
+                <span id="passwordcheck2"></span>
+                <span id="passwordcheck3"></span>
+            </div>
 
-        <div>
-            <input type="submit" class="btn" value="立即注册">
-            <br><br>
-        </div>
-    </form>
-</div>
+            <label style="width: 100%;">
+                <span>&nbsp;</span>
+                <input type="submit" class="button" value="注册" />
+            </label>
+        </form>
+    </div>
+
 
 </body>
 </html>
