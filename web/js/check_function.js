@@ -1,3 +1,4 @@
+
 function checkemail() {//检查用户名格式
     var username=document.getElementById("username");
     var usernamecheck=document.getElementById("usernamecheck");
@@ -35,7 +36,7 @@ function checkpassword() {//检查密码合法性
     if(!myReg3.test(password.value)){
         passwordcheck3.innerHTML="<em style='color:#FF0000'>只能包含字母、数字、下划线</em>";
     }else{
-        passwordcheck3.innerHTML="<em style='color:#00b72e'>不包含非法字符检查通过</em>";
+        passwordcheck3.innerHTML="<em style='color:#00b72e'>非法字符检查通过</em>";
     }
 }
 
@@ -103,6 +104,8 @@ function get_email_code() {
         ;
     });
 };
+
+
 var iTime = 59;
 var Account;
 function RemainTime() {

@@ -73,7 +73,6 @@
     <h2 style="margin-left: 116px;">今日热门</h2>
     <table style="margin: 0 auto">
       <tr>
-
         <td>
           <div style="margin: 10px">
             <a href="https://v.qq.com/x/cover/mzc00200hmv27ue.html" target="_blank">
