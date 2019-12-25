@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -14,12 +15,28 @@
         <button type="submit">全网搜</button>
     </form>
     <table>
-        <tr>
-            <%
-                StringBuilder searchresult=(StringBuilder) session.getAttribute("searchmovi");
-                out.print(searchresult);
-            %>
-        </tr>
+        <c:forEach var="item" items="${sessionScope.searchmovie}" varStatus="status">
+            <c:if test="${status.index%7==0}">
+                <tr>
+            </c:if>
+
+            <td>
+                <div style="margin: 10px">
+                    <a href="JudgeVip?selectmovieid=${item.ypid}" target="_blank" onclick="function x() {
+                      ${sessionScope.keySet()}
+                    }">
+                        <img width="100%" src="${item.fmdz}" alt="图片加载失败" style="border-radius: 6px">
+                        <p>${item.ypmc}</p>
+                        <p class="wrap" title="${item.ypzy}">
+                                ${item.ypzy}
+                        </p>
+                    </a>
+                </div>
+            </td>
+            <c:if test="${(status.index+1)%7==0}">
+                </tr>
+            </c:if>
+        </c:forEach>
     </table>
 </div>
 

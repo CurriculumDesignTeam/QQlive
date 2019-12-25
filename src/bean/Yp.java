@@ -1,29 +1,15 @@
 package bean;
 
 public class Yp {
+    private int ypid;
     private String ypmc;
     private String ypdz;
     private String fmdz;
     private String ypzy;
+    public boolean ypvip;
 
-    public void setYpmc(String ypmc) {
-        this.ypmc = ypmc;
-    }
-
-    public void setYpdz(String ypdz) {
-        this.ypdz = ypdz;
-    }
-
-    public void setFmdz(String fmdz) {
-        this.fmdz = fmdz;
-    }
-
-    public void setYpzy(String ypzy) {
-        this.ypzy = ypzy;
-    }
-
-    public void setYpvip(String ypvip) {
-        this.ypvip = ypvip;
+    public int getYpid() {
+        return ypid;
     }
 
     public String getYpmc() {
@@ -42,9 +28,31 @@ public class Yp {
         return ypzy;
     }
 
-    public String getYpvip() {
+    public boolean isYpvip() {
         return ypvip;
     }
 
-    public String ypvip;
+    public void setYpid(int ypid) {
+        this.ypid = ypid;
+    }
+
+    public void setYpmc(String ypmc) {
+        this.ypmc = ypmc;
+    }
+
+    public void setYpdz(String ypdz) {
+        this.ypdz = ypdz;
+    }
+
+    public void setFmdz(String fmdz) {
+        this.fmdz = fmdz;
+    }
+
+    public void setYpzy(String ypzy) {
+        this.ypzy = ypzy;
+    }
+
+    public void setYpvip(boolean ypvip) {
+        this.ypvip = ypvip;
+    }
 }

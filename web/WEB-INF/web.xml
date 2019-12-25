@@ -70,4 +70,13 @@
         <url-pattern>/MyInfo</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>JudgeVip</servlet-name>
+        <servlet-class>servlet.JudgeVip_Servlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>JudgeVip</servlet-name>
+        <url-pattern>/JudgeVip</url-pattern>
+    </servlet-mapping>
+
 </web-app>

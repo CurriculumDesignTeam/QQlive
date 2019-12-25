@@ -49,7 +49,7 @@ public class login_Servlet extends HttpServlet {
             while (rs.next()){
                 loginuser.setDzxx(rs.getString("DZXX"));
                 loginuser.setYhnc(rs.getString("YHNC"));
-                loginuser.setYhvip(rs.getString("YHVIP"));
+                loginuser.setYhvip(rs.getBoolean("YHVIP"));
                 result=1;
             }
         }catch (Exception e){

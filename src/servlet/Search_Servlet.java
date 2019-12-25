@@ -13,6 +13,7 @@ import java.io.PrintWriter;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 public class Search_Servlet extends HttpServlet {
     @Override
@@ -36,40 +37,32 @@ public class Search_Servlet extends HttpServlet {
         }
 
 
-        StringBuilder sb=new StringBuilder();
-        sb.append("<tr>");
+        ArrayList<Yp> searchmovie=new ArrayList<Yp>();
         int i=0;
 
         try {
             ResultSet rs=DBUtil.executeQuery(sql);
             while (rs.next()){
+                int ypid=rs.getInt(1);
                 String ypmc=rs.getString(2);
                 String ypdz=rs.getString(3);
                 String fmdz=rs.getString(4);
                 String ypzy=rs.getString(5);
-                String ypvip=rs.getString(6);
-                if(i%7==0)
-                    sb.append("<tr>");
-                i++;
-                sb.append("<td>\n" +
-                        "          <div style=\"margin: 10px\">\n" +
-                        "            <a href=\"play.jsp?ypdz="+ypdz+"&ypmc="+ypmc+"\" target=\"_blank\">\n" +
-                        "              <img width=\"100%\" src=\""+fmdz+"\" alt=\"图片加载失败\" style=\"border-radius: 6px\">\n" +
-                        "              <p>"+ypmc+"</p>\n" +
-                        "              <p class=\"wrap\" title=\""+ypzy+"\">\n" + ypzy +
-                        "              </p>\n" +
-                        "            </a>\n" +
-                        "          </div>\n" +
-                        "        </td>");
-                if((i+1)%7==0&&i!=0)
-                    sb.append("</tr>");
-                i++;
+                boolean ypvip=rs.getBoolean(6);
+                Yp selectmovie=new Yp();
+                selectmovie.setYpid(ypid);
+                selectmovie.setYpmc(ypmc);
+                selectmovie.setYpdz(ypdz);
+                selectmovie.setFmdz(fmdz);
+                selectmovie.setYpzy(ypzy);
+                selectmovie.setYpvip(ypvip);
+                searchmovie.add(selectmovie);
             }
         }catch (SQLException e){
             e.printStackTrace();
         }
 
-        session.setAttribute("searchmovi",sb);
+        session.setAttribute("searchmovie",searchmovie);
         resp.sendRedirect("search.jsp");
 
     }

@@ -3,7 +3,7 @@ package bean;
 public class Yh {
     private String dzxx;
     private String yhnc;
-    private String yhvip;
+    private boolean yhvip;
 
     public void setDzxx(String dzxx) {
         this.dzxx = dzxx;
@@ -11,10 +11,6 @@ public class Yh {
 
     public void setYhnc(String yhnc) {
         this.yhnc = yhnc;
-    }
-
-    public void setYhvip(String yhvip) {
-        this.yhvip = yhvip;
     }
 
     public String getDzxx() {
@@ -25,7 +21,11 @@ public class Yh {
         return yhnc;
     }
 
-    public String getYhvip() {
+    public void setYhvip(boolean yhvip) {
+        this.yhvip = yhvip;
+    }
+
+    public boolean isYhvip() {
         return yhvip;
     }
 }
