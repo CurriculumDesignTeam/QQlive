@@ -58,7 +58,7 @@ public class login_Servlet extends HttpServlet {
 
         if(result==1){//登录成功
             session.setAttribute("loginuser",loginuser);
-            out.print("<script>alert(\"登录成功！！！\");window.location.href=\"index.jsp\";</script>");
+            out.print("<script>window.location.href=\"index.jsp\";</script>");
         }else{//登录失败
             out.print("<script>alert(\"账号密码不匹配，请检查后重新登录！！！\");window.history.back(-1);</script>");
         }
