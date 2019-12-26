@@ -17,12 +17,12 @@
       <img height="36px" src="favicon.ico" alt="logo">
     </div>
 
-    <div class="search" style="float:left">
-      <form action="Search" class="searchForm">
+    <div id="search" style="float:left">
+      <form action="Search" id="searchForm">
         <label>
-          <input name="searchword" type="text" placeholder="搜片名/主演/类型">
+          <input id="searchInput" name="searchword" type="text" placeholder="搜片名/主演/类型">
         </label>
-        <button type="submit" class="searchBtn">全网搜</button>
+        <button id="searchBtn" type="submit" class="searchBtn">全网搜</button>
       </form>
     </div>
 
@@ -35,20 +35,17 @@
           <a href="MyInfo"><button>${sessionScope.loginuser.yhnc}</button></a>
           <a href="Logout"><button>注销</button></a>
         </c:if>
-
     </div>
   </div>
 
   <%--滚动图片--%>
-  <div style="height: 530px;background-color: #2aabd2;margin-bottom: 10px">
-
-    <div style="background-color: #0f0f0f;width: 1535px;height: 100%;float: left">
+  <div id="banner">
+    <div id="banner_cover">
       <a id="randa" href="https://v.qq.com/x/cover/hk765ykwj4bjpcl.html" target="_blank">
         <img id="randimg" name="randimg" src="imgs/slider/01.jpg" style="height: 530px" alt="图片加载失败">
       </a>
     </div>
-
-    <div style="background-color: rgb(34, 34, 45);width: 368px;height: 100%;float: right">
+    <div id="banner_items">
       <ul>
         <li style="height: 10%;padding: 0">
           <img src="imgs/hot.png" style="width: 24px;margin: 0 0 0 10px;" alt="加载失败">
@@ -63,9 +60,7 @@
         <li><a id="a6" target="_blank"><p id="p6">邻座的怪同学</p></a></li>
         <li><a id="a7" target="_blank"><p id="p7">中国机长</p></a></li>
       </ul>
-
     </div>
-
   </div>
 
   <%--今日热门--%>
