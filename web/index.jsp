@@ -12,13 +12,19 @@
   <body style="background-color: rgb(248, 248, 248)" onload="swapPic()">
 
   <%--顶部导航--%>
-  <div style="height:68px;background-color:#636c72">
-    <div style="float:left">
-      <img height="36px" src="favicon.ico" alt="logo">
+  <div id="nav">
+
+    <div style="width: 20%;height:100%;float: left;">
+      <div style="margin-top: 15px;margin-left: 50px">
+        <a href="#">
+          <img id="logoimg" height="36px" src="favicon.ico" alt="logo">
+          <b style="font-size: 25px;margin-bottom: 5px;vertical-align: middle">在线影视</b>
+        </a>
+      </div>
     </div>
 
-    <div id="search" style="float:left">
-      <form action="Search" id="searchForm">
+    <div id="search">
+      <form action="Search" id="searchForm" target="_blank">
         <label>
           <input id="searchInput" name="searchword" type="text" placeholder="搜片名/主演/类型">
         </label>
@@ -26,15 +32,24 @@
       </form>
     </div>
 
-    <div style="float:left">
+    <div id="btns">
+      <div class="btn" style="padding-top: 15px;padding-right: 10px">
         <c:if test="${sessionScope.loginuser==null}">
-          <a href="login.jsp"><button>登录</button></a>
-          <a href="register.jsp" target="_blank"><button>注册</button></a>
+          <img src="imgs/vip.png" style="opacity:0;vertical-align: middle;margin-right: 4px;width: 36px" alt="加载失败">
+          <a href="login.jsp" style="vertical-align: middle">登录</a>
+          <a href="register.jsp" target="_blank" style="vertical-align: middle">注册</a>
         </c:if>
         <c:if test="${sessionScope.loginuser!=null}">
-          <a href="MyInfo"><button>${sessionScope.loginuser.yhnc}</button></a>
-          <a href="Logout"><button>注销</button></a>
+          <c:if test="${sessionScope.loginuser.yhvip}">
+            <img src="imgs/vip.png" style="vertical-align: middle;margin-right: 4px;width: 36px" alt="加载失败">
+          </c:if>
+          <c:if test="${!sessionScope.loginuser.yhvip}">
+            <img src="imgs/vip.png" style="opacity: 0; vertical-align: middle;margin-right: 4px;width: 36px" alt="加载失败">
+          </c:if>
+          <a href="MyInfo" target="_blank" style="vertical-align: middle">${sessionScope.loginuser.yhnc}</a>
+          <a href="Logout" style="vertical-align: middle">注销</a>
         </c:if>
+      </div>
     </div>
   </div>
 
