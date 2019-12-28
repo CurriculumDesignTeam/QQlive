@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>登录</title>
+    <title>在线影视-登录</title>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
     <link rel="stylesheet" href="css/login.css">
 

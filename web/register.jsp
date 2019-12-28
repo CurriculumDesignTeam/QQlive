@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>注册</title>
+    <title>在线影视-注册</title>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
     <script type="text/javascript" rel="script" src="js/check_function.js"></script>
     <script src="js/jquery-3.4.1.js"></script>

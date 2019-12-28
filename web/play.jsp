@@ -3,7 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <title>正在播放</title>
+    <title>在线影视-正在播放</title>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
     <link rel="stylesheet" href="css/play.css">
 </head>

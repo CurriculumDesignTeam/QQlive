@@ -133,6 +133,12 @@ li p:hover{
 
 }
 
+#vip{
+    margin: 0;
+    padding: 0;
+    background-color: #00000000;
+}
+
 .btn a {
     text-decoration:none;
     background:#2f435e;

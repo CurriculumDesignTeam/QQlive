@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>找回密码</title>
+    <title>在线影视-找回密码</title>
     <script type="text/javascript" rel="script" src="js/check_function.js"></script>
     <script src="js/jquery-3.4.1.js"></script>
 </head>

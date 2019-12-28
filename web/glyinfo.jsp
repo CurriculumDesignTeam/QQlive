@@ -2,7 +2,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <title>上传记录</title>
+    <title>在线影视-上传记录</title>
 </head>
 <body style="text-align: center">
 

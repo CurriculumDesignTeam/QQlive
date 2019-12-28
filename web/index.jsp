@@ -41,10 +41,12 @@
         </c:if>
         <c:if test="${sessionScope.loginuser!=null}">
           <c:if test="${sessionScope.loginuser.yhvip}">
-            <img src="imgs/vip.png" style="vertical-align: middle;margin-right: 4px;width: 36px" alt="加载失败">
+            <img src="imgs/vip.png" style="vertical-align: middle;margin-right: 4px;width: 36px" alt="加载失败" title="尊享VIP">
           </c:if>
           <c:if test="${!sessionScope.loginuser.yhvip}">
-            <img src="imgs/vip.png" style="opacity: 0; vertical-align: middle;margin-right: 4px;width: 36px" alt="加载失败">
+            <a id="vip" href="" target="_blank">
+              <img src="imgs/vip.png" style="opacity: 0.4; vertical-align: middle;margin-right: 4px;width: 36px" alt="加载失败" title="开通VIP">
+            </a>
           </c:if>
           <a href="MyInfo" target="_blank" style="vertical-align: middle">${sessionScope.loginuser.yhnc}</a>
           <a href="Logout" style="vertical-align: middle">注销</a>
@@ -84,7 +86,8 @@
     <table style="margin: 0 auto">
       <tr>
         <td>
-          <div style="margin: 10px">
+          <img src="imgs/vip.png" style="position: absolute;margin-left: 192px" alt="加载失败" title="VIP专享影视">
+          <div style="margin: 10px;">
             <a href="https://v.qq.com/x/cover/mzc00200hmv27ue.html" target="_blank">
               <img width="100%" src="http://puui.qpic.cn/vcover_vt_pic/0/mzc00200hmv27ue1575884632/220" alt="图片加载失败" style="border-radius: 6px">
               <p>受益人</p>
@@ -95,6 +98,7 @@
           </div>
         </td>
         <td>
+          <img src="imgs/vip.png" style="position: absolute;margin-left: 192px" alt="加载失败" title="VIP专享影视">
           <div style="margin: 10px">
             <a href="https://v.qq.com/x/cover/mzc00200y6souzq.html" target="_blank">
               <img width="100%" src="http://puui.qpic.cn/vcover_vt_pic/0/mzc00200y6souzq1576721122/220" alt="图片加载失败" style="border-radius: 6px">

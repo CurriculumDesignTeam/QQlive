@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>我是后台</title>
+    <title>在线影视-后台</title>
     <link rel="stylesheet" href="css/login.css">
 </head>
 <body>

@@ -2,7 +2,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>我的信息</title>
+    <title>在线影视-${sessionScope.loginuser.yhnc}的信息</title>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
 </head>
 <body style="text-align: center">
