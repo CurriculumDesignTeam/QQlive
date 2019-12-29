@@ -4,14 +4,18 @@
 <head>
     <title>在线影视-${sessionScope.loginuser.yhnc}的信息</title>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/table.css" rel="stylesheet">
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </head>
 <body style="text-align: center">
 
 <c:if test="${sessionScope.gkjl!=null}">
-    <div>
+    <div style="text-align: center">
         <h1>${sessionScope.loginuser.yhnc}の观影记录</h1>
-        <table align="center">
-            <tr>
+        <table class="table table-bordered table-hover" style="width: 50%">
+            <tr class="success">
                 <th>观看影片名称</th>
                 <th>上次观看时间</th>
             </tr>
@@ -21,8 +25,6 @@
                     <td>${item.ypmc}</td>
                     <td>${item.gksj}</td>
                 </tr>
-
-
             </c:forEach>
         </table>
     </div>

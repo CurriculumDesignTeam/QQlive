@@ -48,7 +48,7 @@
               <img src="imgs/vip_user.png" style="opacity: 0.4; vertical-align: middle;margin-right: 4px;width: 36px" alt="加载失败" title="开通VIP">
             </a>
           </c:if>
-          <a href="MyInfo" target="_blank" style="vertical-align: middle">${sessionScope.loginuser.yhnc}</a>
+          <a href="MyInfo" target="_blank" style="vertical-align: middle" title="个人中心">${sessionScope.loginuser.yhnc}</a>
           <a href="Logout" style="vertical-align: middle">注销</a>
         </c:if>
       </div>

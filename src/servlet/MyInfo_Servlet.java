@@ -34,7 +34,7 @@ public class MyInfo_Servlet extends HttpServlet {
 
         Yh loginuser=(Yh)session.getAttribute("loginuser");
 
-        String sql="select * from f1(?) order by GKSJ";
+        String sql="select * from f1(?) order by GKSJ desc";
         ArrayList<Gk> test=new ArrayList<Gk>();
 
         PreparedStatement ps=DBUtil.executePreparedStatment(sql);

@@ -58,7 +58,8 @@
                 <tr>
             </c:if>
 
-            <td>
+            <td title=
+            "片名：${item.ypmc}&#10;主演：${item.ypzy}">
                 <div style="margin: 10px;position: relative">
                     <a href="JudgeVip?selectmovieid=${item.ypid}" target="_blank" onclick="function x() {
                       ${sessionScope.keySet()}

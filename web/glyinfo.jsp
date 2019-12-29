@@ -3,14 +3,18 @@
 <html>
 <head>
     <title>在线影视-上传记录</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/table.css" rel="stylesheet">
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </head>
 <body style="text-align: center">
-
-<c:if test="${sessionScope.scjl!=null}">
+<h1>${sessionScope.logingly.glyzh}の上传记录</h1>
+<c:if test="${!empty sessionScope.scjl}">
     <div>
-        <h1>${sessionScope.logingly.glyzh}の上传记录</h1>
-        <table align="center">
-            <tr>
+        <table class="table table-bordered table-hover" style="width: 30%">
+            <tr class="success">
                 <th>上传影片名称</th>
             </tr>
 
@@ -24,7 +28,9 @@
         </table>
     </div>
 </c:if>
-
+<c:if test="${empty sessionScope.scjl}">
+    <h1>暂无上传记录！</h1>
+</c:if>
 
 </body>
 </html>
