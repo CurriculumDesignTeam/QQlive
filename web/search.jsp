@@ -32,17 +32,17 @@
         <div id="btns">
             <div class="btn" style="padding-top: 15px;padding-right: 10px">
                 <c:if test="${sessionScope.loginuser==null}">
-                    <img src="imgs/vip.png" style="opacity:0;vertical-align: middle;margin-right: 4px;width: 36px" alt="加载失败">
+                    <img src="imgs/vip_user.png" style="opacity:0;vertical-align: middle;margin-right: 4px;width: 36px" alt="加载失败">
                     <a href="login.jsp" style="vertical-align: middle">登录</a>
                     <a href="register.jsp" target="_blank" style="vertical-align: middle">注册</a>
                 </c:if>
                 <c:if test="${sessionScope.loginuser!=null}">
                     <c:if test="${sessionScope.loginuser.yhvip}">
-                        <img src="imgs/vip.png" style="vertical-align: middle;margin-right: 4px;width: 36px" alt="加载失败" title="尊享VIP">
+                        <img src="imgs/vip_user.png" style="vertical-align: middle;margin-right: 4px;width: 36px" alt="加载失败" title="尊享VIP">
                     </c:if>
                     <c:if test="${!sessionScope.loginuser.yhvip}">
                         <a id="vip" href="" target="_blank">
-                            <img src="imgs/vip.png" style="opacity: 0.4; vertical-align: middle;margin-right: 4px;width: 36px" alt="加载失败" title="开通VIP">
+                            <img src="imgs/vip_user.png" style="opacity: 0.4; vertical-align: middle;margin-right: 4px;width: 36px" alt="加载失败" title="开通VIP">
                         </a>
                     </c:if>
                     <a href="MyInfo" target="_blank" style="vertical-align: middle">${sessionScope.loginuser.yhnc}</a>
@@ -59,10 +59,7 @@
             </c:if>
 
             <td>
-                <c:if test="${item.ypvip}">
-                    <img src="imgs/vip.png" style="position: absolute;margin-left: 192px" alt="加载失败" title="VIP专享影视">
-                </c:if>
-                <div style="margin: 10px">
+                <div style="margin: 10px;position: relative">
                     <a href="JudgeVip?selectmovieid=${item.ypid}" target="_blank" onclick="function x() {
                       ${sessionScope.keySet()}
                     }">
@@ -72,6 +69,9 @@
                                 ${item.ypzy}
                         </p>
                     </a>
+                    <c:if test="${item.ypvip}">
+                        <img src="imgs/vip_movie.png" style="position: absolute;right: 5px;top:5px;display: inline-block" alt="加载失败" title="VIP专享影视">
+                    </c:if>
                 </div>
             </td>
             <c:if test="${(status.index+1)%7==0}">

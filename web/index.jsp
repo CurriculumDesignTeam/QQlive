@@ -35,17 +35,17 @@
     <div id="btns">
       <div class="btn" style="padding-top: 15px;padding-right: 10px">
         <c:if test="${sessionScope.loginuser==null}">
-          <img src="imgs/vip.png" style="opacity:0;vertical-align: middle;margin-right: 4px;width: 36px" alt="加载失败">
+          <img src="imgs/vip_user.png" style="opacity:0;vertical-align: middle;margin-right: 4px;width: 36px" alt="加载失败">
           <a href="login.jsp" style="vertical-align: middle">登录</a>
           <a href="register.jsp" target="_blank" style="vertical-align: middle">注册</a>
         </c:if>
         <c:if test="${sessionScope.loginuser!=null}">
           <c:if test="${sessionScope.loginuser.yhvip}">
-            <img src="imgs/vip.png" style="vertical-align: middle;margin-right: 4px;width: 36px" alt="加载失败" title="尊享VIP">
+            <img src="imgs/vip_user.png" style="vertical-align: middle;margin-right: 4px;width: 36px" alt="加载失败" title="尊享VIP">
           </c:if>
           <c:if test="${!sessionScope.loginuser.yhvip}">
             <a id="vip" href="" target="_blank">
-              <img src="imgs/vip.png" style="opacity: 0.4; vertical-align: middle;margin-right: 4px;width: 36px" alt="加载失败" title="开通VIP">
+              <img src="imgs/vip_user.png" style="opacity: 0.4; vertical-align: middle;margin-right: 4px;width: 36px" alt="加载失败" title="开通VIP">
             </a>
           </c:if>
           <a href="MyInfo" target="_blank" style="vertical-align: middle">${sessionScope.loginuser.yhnc}</a>
@@ -84,22 +84,21 @@
   <div>
     <h2 style="margin-left: 116px;">今日热门</h2>
     <table style="margin: 0 auto">
-      <tr>
+        <tr>
         <td>
-          <img src="imgs/vip.png" style="position: absolute;margin-left: 192px" alt="加载失败" title="VIP专享影视">
-          <div style="margin: 10px;">
+          <div style="margin: 10px;position: relative">
             <a href="https://v.qq.com/x/cover/mzc00200hmv27ue.html" target="_blank">
-              <img width="100%" src="http://puui.qpic.cn/vcover_vt_pic/0/mzc00200hmv27ue1575884632/220" alt="图片加载失败" style="border-radius: 6px">
-              <p>受益人</p>
-              <p class="wrap" title="主演：大鹏 柳岩 张子贤 彭波">
-                主演：大鹏 柳岩 张子贤 彭波
-              </p>
+                <img width="100%" src="http://puui.qpic.cn/vcover_vt_pic/0/mzc00200hmv27ue1575884632/220" alt="图片加载失败" style="border-radius: 6px">
+                <p>受益人</p>
+                <p class="wrap" title="主演：大鹏 柳岩 张子贤 彭波">
+                    主演：大鹏 柳岩 张子贤 彭波
+                </p>
+                <img src="imgs/vip_movie.png" style="position: absolute;right: 5px;top:5px;display: inline-block" alt="加载失败" title="VIP专享影视">
             </a>
           </div>
         </td>
         <td>
-          <img src="imgs/vip.png" style="position: absolute;margin-left: 192px" alt="加载失败" title="VIP专享影视">
-          <div style="margin: 10px">
+          <div style="margin: 10px;position: relative">
             <a href="https://v.qq.com/x/cover/mzc00200y6souzq.html" target="_blank">
               <img width="100%" src="http://puui.qpic.cn/vcover_vt_pic/0/mzc00200y6souzq1576721122/220" alt="图片加载失败" style="border-radius: 6px">
               <p>法医秦明之亡命救赎</p>
@@ -107,10 +106,11 @@
                 主演：邓飞 希童 袁祥仁 闫鹏 黄皓达
               </p>
             </a>
+            <img src="imgs/vip_movie.png" style="position: absolute;right: 5px;top:5px;display: inline-block" alt="加载失败" title="VIP专享影视">
           </div>
         </td>
         <td>
-          <div style="margin: 10px">
+          <div style="margin: 10px;position: relative">
             <a href="https://v.qq.com/x/cover/mzc00200qre764z.html" target="_blank">
               <img width="100%" src="http://puui.qpic.cn/vcover_vt_pic/0/mzc00200qre764z1575442675/220" alt="图片加载失败" style="border-radius: 6px">
               <p>魔戟战神</p>
@@ -118,10 +118,11 @@
                 主演：张冰倩 杜鹏远 任逍遥
               </p>
             </a>
+            <img src="imgs/vip_movie.png" style="position: absolute;right: 5px;top:5px;display: inline-block" alt="加载失败" title="VIP专享影视">
           </div>
         </td>
         <td>
-          <div style="margin: 10px">
+          <div style="margin: 10px;position: relative">
             <a href="https://v.qq.com/x/cover/714pdmcrnqdlmdx.html" target="_blank">
               <img width="100%" src="http://puui.qpic.cn/vcover_vt_pic/0/714pdmcrnqdlmdx1574668477/220" alt="图片加载失败" style="border-radius: 6px">
               <p>少年的你</p>
@@ -132,7 +133,7 @@
           </div>
         </td>
         <td>
-          <div style="margin: 10px">
+          <div style="margin: 10px;position: relative">
             <a href="https://v.qq.com/x/cover/hk765ykwj4bjpcl.html" target="_blank">
               <img width="100%" src="http://puui.qpic.cn/vcover_vt_pic/0/hk765ykwj4bjpcl1576210556/220" alt="图片加载失败" style="border-radius: 6px">
               <p>我和我的祖国</p>
@@ -143,7 +144,7 @@
           </div>
         </td>
         <td>
-          <div style="margin: 10px">
+          <div style="margin: 10px;position: relative">
             <a href="https://v.qq.com/x/cover/mzc00200bq925ky.html" target="_blank">
               <img width="100%" src="http://puui.qpic.cn/vcover_vt_pic/0/mzc00200bq925ky1576154352/220" alt="图片加载失败" style="border-radius: 6px">
               <p>长安道</p>
@@ -154,7 +155,7 @@
           </div>
         </td>
         <td>
-          <div style="margin: 10px">
+          <div style="margin: 10px;position: relative">
             <a href="https://v.qq.com/x/cover/cp8jhn5o7r5j0aa.html" target="_blank">
               <img width="100%" src="http://puui.qpic.cn/vcover_vt_pic/0/cp8jhn5o7r5j0aa1519977118/220" alt="图片加载失败" style="border-radius: 6px">
               <p>英雄本色2018</p>
@@ -175,7 +176,7 @@
     <table style="margin: 0 auto;">
       <tr>
         <td>
-          <div style="margin: 10px">
+          <div style="margin: 10px;position: relative">
             <a href="https://v.qq.com/x/cover/hk765ykwj4bjpcl.html" target="_blank">
               <img width="100%" src="http://puui.qpic.cn/vcover_vt_pic/0/hk765ykwj4bjpcl1576210556/220" alt="图片加载失败" style="border-radius: 6px">
               <p>我和我的祖国</p>
@@ -187,7 +188,7 @@
 
         </td>
         <td>
-          <div style="margin: 10px">
+          <div style="margin: 10px;position: relative">
             <a href="https://v.qq.com/x/cover/714pdmcrnqdlmdx.html" target="_blank">
               <img width="100%" src="http://puui.qpic.cn/vcover_vt_pic/0/714pdmcrnqdlmdx1574668477/220" alt="图片加载失败" style="border-radius: 6px">
               <p>少年的你</p>
@@ -198,7 +199,7 @@
           </div>
         </td>
         <td>
-          <div style="margin: 10px">
+          <div style="margin: 10px;position: relative">
             <a href="https://v.qq.com/x/cover/ki0r21vwmy1aga2.html" target="_blank">
               <img width="100%" src="http://puui.qpic.cn/vcover_vt_pic/0/ki0r21vwmy1aga21559271820/220" alt="图片加载失败" style="border-radius: 6px">
               <p>邪不压正</p>
@@ -209,7 +210,7 @@
           </div>
         </td>
         <td>
-          <div style="margin: 10px">
+          <div style="margin: 10px;position: relative">
             <a href="https://v.qq.com/x/cover/6983f15b7g5xch7.html" target="_blank">
               <img width="100%" src="http://puui.qpic.cn/vcover_vt_pic/0/6983f15b7g5xch71566976604/220" alt="图片加载失败" style="border-radius: 6px">
               <p>动物世界</p>
@@ -220,7 +221,7 @@
           </div>
         </td>
         <td>
-          <div style="margin: 10px">
+          <div style="margin: 10px;position: relative">
             <a href="https://v.qq.com/x/cover/r6ri9qkcu66dna8.html" target="_blank">
               <img width="100%" src="http://puui.qpic.cn/vcover_vt_pic/0/r6ri9qkcu66dna81559137861/220" alt="图片加载失败" style="border-radius: 6px">
               <p>狄仁杰之四大天王</p>
@@ -231,7 +232,7 @@
           </div>
         </td>
         <td>
-          <div style="margin: 10px">
+          <div style="margin: 10px;position: relative">
             <a href="https://v.qq.com/x/cover/5y95zy4idzqf6hc.html" target="_blank">
               <img width="100%" src="http://puui.qpic.cn/vcover_vt_pic/0/5y95zy4idzqf6hc1515143734/220" alt="图片加载失败" style="border-radius: 6px">
               <p>捉妖记2</p>
@@ -242,7 +243,7 @@
           </div>
         </td>
         <td>
-          <div style="margin: 10px">
+          <div style="margin: 10px;position: relative">
             <a href="https://v.qq.com/x/cover/rj8uc45tm8a17wm.html" target="_blank">
               <img width="100%" src="http://puui.qpic.cn/vcover_vt_pic/0/rj8uc45tm8a17wm1575030295/220" alt="图片加载失败" style="border-radius: 6px">
               <p>中国机长</p>
