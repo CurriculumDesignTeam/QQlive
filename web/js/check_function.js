@@ -110,6 +110,7 @@ var iTime = 59;
 var Account;
 function RemainTime() {
     document.getElementById('toemail').disabled = true;
+    document.getElementById('username').disabled = true;
     //document.getElementById('toemail').style.backgroundColor="gray";
     var iSecond, sSecond = "", sTime = "";
     if (iTime >= 0) {
