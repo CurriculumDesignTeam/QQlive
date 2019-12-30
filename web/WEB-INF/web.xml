@@ -114,4 +114,13 @@
         <servlet-name>GlyLogout</servlet-name>
         <url-pattern>/GlyLogout</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>JoinVip</servlet-name>
+        <servlet-class>servlet.JoinVip_Servlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>JoinVip</servlet-name>
+        <url-pattern>/JoinVip</url-pattern>
+    </servlet-mapping>
 </web-app>

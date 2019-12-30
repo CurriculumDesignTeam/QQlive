@@ -81,7 +81,7 @@ public class JudgeVip_Servlet extends HttpServlet {
             resp.sendRedirect("play.jsp");
         }else {//没有权限，提示开通vip
             session.setAttribute("selectmovie",null);
-            out.print("<script>alert(\"没有权限查看该影片！！！\");window.location.href=\"index.jsp\";</script>");
+            out.print("<script>if(confirm(\"您尚未激活vip，是否激活?\")){window.location.href=\"joinvip.jsp\";}else{window.location.href=\"search.jsp\";}</script>");
         }
 
     }
