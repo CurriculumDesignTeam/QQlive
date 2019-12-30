@@ -3,28 +3,28 @@ var addedLink = 0;
 images = [];
 images[0] = new Image();
 images[0].src = "imgs/slider/01.jpg";
-images[0].href = "https://v.qq.com/x/cover/hk765ykwj4bjpcl.html";
+images[0].href = "JudgeVip?selectmovieid=184";
 images[1] = new Image();
 images[1].src = "imgs/slider/02.jpg";
-images[1].href = "https://v.qq.com/x/cover/mzc00200hmv27ue.html";
+images[1].href = "JudgeVip?selectmovieid=168";
 images[2] = new Image();
 images[2].src = "imgs/slider/03.jpg";
-images[2].href = "https://v.qq.com/x/cover/mzc00200y6souzq.html";
+images[2].href = "JudgeVip?selectmovieid=224";
 images[3] = new Image();
 images[3].src = "imgs/slider/04.jpg";
-images[3].href = "https://v.qq.com/x/cover/714pdmcrnqdlmdx.html";
+images[3].href = "JudgeVip?selectmovieid=165";
 images[4] = new Image();
 images[4].src = "imgs/slider/05.jpg";
-images[4].href = "https://v.qq.com/x/cover/mzc00200qre764z.html";
+images[4].href = "JudgeVip?selectmovieid=250";
 images[5] = new Image();
 images[5].src = "imgs/slider/06.jpg";
-images[5].href = "https://v.qq.com/x/cover/mzc00200bq925ky.html";
+images[5].href = "JudgeVip?selectmovieid=170";
 images[6] = new Image();
 images[6].src = "imgs/slider/07.jpg";
-images[6].href = "https://v.qq.com/x/cover/3i8a8pc4nthjqq8.html";
+images[6].href = "JudgeVip?selectmovieid=201";
 images[7] = new Image();
 images[7].src = "imgs/slider/08.jpg";
-images[7].href = "https://v.qq.com/x/cover/rj8uc45tm8a17wm.html";
+images[7].href = "JudgeVip?selectmovieid=160";
 
 /**
  * 设置封面滚动

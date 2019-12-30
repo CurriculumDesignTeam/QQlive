@@ -33,6 +33,11 @@ public class JudgeVip_Servlet extends HttpServlet {
         Yh loginuser=(Yh) session.getAttribute("loginuser");
         String selectmovieid=(String) req.getParameter("selectmovieid");
 
+        if(loginuser==null){
+            out.print("<script>alert(\"未登录，请登录后重试！！！\");window.location.href=\"login.jsp\";</script>");
+            return;
+        }
+
 
         String sql="select * from py where YPBH="+selectmovieid;
 

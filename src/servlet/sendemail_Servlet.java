@@ -19,19 +19,11 @@ public class sendemail_Servlet extends HttpServlet {
         HttpSession session=req.getSession();
 
         String to = req.getParameter("email");
-        System.out.println("to:"+to);
         if(to!=null) {//发送验证码
             String email_code = MailUtil.randomVC(6);
             session.setAttribute("ecode",email_code);
-            System.out.println(email_code);
-
-//            MailUtil.send_email(to, email_code);
             MailUtil.sendHtml("在线影视",to,"验证码",email_code);
-
-            System.out.println("发送验证码成功");
         }
-
-        System.out.println("sendemail end...");
     }
 
     @Override
